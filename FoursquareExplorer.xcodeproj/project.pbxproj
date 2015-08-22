@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B1D84FD2552DC8C060F22C1 /* libPods-FoursquareExplorer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3318A570EE7971E1D4F15029 /* libPods-FoursquareExplorer.a */; };
 		A7E6254C1B877C05005BD1BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E6254B1B877C05005BD1BA /* CoreData.framework */; };
 		A7E6254F1B877C79005BD1BA /* Venue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7E6254D1B877C79005BD1BA /* Venue.xcdatamodeld */; };
 		A7E625521B877E2E005BD1BA /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E625511B877E2E005BD1BA /* Venue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -42,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3318A570EE7971E1D4F15029 /* libPods-FoursquareExplorer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FoursquareExplorer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		493300F4ECAFBD1A7AE2EB50 /* Pods-FoursquareExplorer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquareExplorer.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoursquareExplorer/Pods-FoursquareExplorer.release.xcconfig"; sourceTree = "<group>"; };
+		758677C66319CB3DDDEFA0A5 /* Pods-FoursquareExplorer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquareExplorer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoursquareExplorer/Pods-FoursquareExplorer.debug.xcconfig"; sourceTree = "<group>"; };
 		A7E6254B1B877C05005BD1BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A7E6254E1B877C79005BD1BA /* Venue.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Venue.xcdatamodel; sourceTree = "<group>"; };
 		A7E625501B877E2E005BD1BA /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Venue.h; path = Model/Venue.h; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 				A7EAFF531B87447700296103 /* Security.framework in Frameworks */,
 				A7EAFF511B87446600296103 /* CoreLocation.framework in Frameworks */,
 				A7EAFF331B87418300296103 /* MapKit.framework in Frameworks */,
+				1B1D84FD2552DC8C060F22C1 /* libPods-FoursquareExplorer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43C963609742D901F3ED943D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				758677C66319CB3DDDEFA0A5 /* Pods-FoursquareExplorer.debug.xcconfig */,
+				493300F4ECAFBD1A7AE2EB50 /* Pods-FoursquareExplorer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A7EAFEFD1B8740FB00296103 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +124,7 @@
 				A7EC51AA1B888260003614BA /* Frameworks */,
 				A7EAFF221B8740FB00296103 /* FoursquareExplorerTests */,
 				A7EAFF071B8740FB00296103 /* Products */,
+				43C963609742D901F3ED943D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -238,6 +253,7 @@
 				A7EAFF521B87447700296103 /* Security.framework */,
 				A7EAFF501B87446600296103 /* CoreLocation.framework */,
 				A7EAFF321B87418300296103 /* MapKit.framework */,
+				3318A570EE7971E1D4F15029 /* libPods-FoursquareExplorer.a */,
 			);
 			name = Frameworks;
 			path = FoursquareExplorer;
@@ -250,9 +266,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7EAFF291B8740FB00296103 /* Build configuration list for PBXNativeTarget "FoursquareExplorer" */;
 			buildPhases = (
+				A2D7AD0375C89E717DDBCD14 /* Check Pods Manifest.lock */,
 				A7EAFF021B8740FB00296103 /* Sources */,
 				A7EAFF031B8740FB00296103 /* Frameworks */,
 				A7EAFF041B8740FB00296103 /* Resources */,
+				FD668FCEBD9D6838E4A1C222 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -338,6 +356,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2D7AD0375C89E717DDBCD14 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD668FCEBD9D6838E4A1C222 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoursquareExplorer/Pods-FoursquareExplorer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A7EAFF021B8740FB00296103 /* Sources */ = {
@@ -482,6 +533,7 @@
 		};
 		A7EAFF2A1B8740FB00296103 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 758677C66319CB3DDDEFA0A5 /* Pods-FoursquareExplorer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -495,6 +547,7 @@
 		};
 		A7EAFF2B1B8740FB00296103 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 493300F4ECAFBD1A7AE2EB50 /* Pods-FoursquareExplorer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -32,7 +32,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N8e-NQ-hZ5">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pl6-Dp-ee4">
@@ -56,10 +56,6 @@
                                     <outlet property="delegate" destination="pbe-5L-320" id="Bj3-zo-voJ"/>
                                 </connections>
                             </mapView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Oji-Cg-vHm">
-                                <rect key="frame" x="282" y="281" width="37" height="37"/>
-                                <color key="color" red="0.72549019609999998" green="0.12549019610000001" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </activityIndicatorView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="800" minValue="0.0" maxValue="800" translatesAutoresizingMaskIntoConstraints="NO" id="2qb-VM-wL6">
                                 <rect key="frame" x="14" y="65" width="401" height="31"/>
                                 <connections>
@@ -69,13 +65,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="800" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTP-ua-zlj">
                                 <rect key="frame" x="421" y="71" width="24" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="Oji-Cg-vHm" secondAttribute="centerY" constant="0.5" id="1gJ-CV-r01"/>
                             <constraint firstItem="2zN-yi-BRf" firstAttribute="top" secondItem="Swq-mA-ELp" secondAttribute="bottom" constant="-66" id="Dhp-2q-AYZ"/>
                             <constraint firstItem="TTP-ua-zlj" firstAttribute="leading" secondItem="2qb-VM-wL6" secondAttribute="trailing" constant="8" id="HZp-K8-UHX"/>
                             <constraint firstAttribute="trailing" secondItem="2zN-yi-BRf" secondAttribute="trailing" id="QfO-HA-Gng"/>
@@ -89,14 +84,19 @@
                             <constraint firstAttribute="trailing" secondItem="Swq-mA-ELp" secondAttribute="trailing" id="ldO-Lu-c9C"/>
                             <constraint firstItem="2zN-yi-BRf" firstAttribute="leading" secondItem="bfT-Y4-YX4" secondAttribute="leading" id="ntj-1l-j86"/>
                             <constraint firstItem="Swq-mA-ELp" firstAttribute="top" secondItem="2qb-VM-wL6" secondAttribute="bottom" constant="8" id="tP9-P7-4Ag"/>
-                            <constraint firstAttribute="centerX" secondItem="Oji-Cg-vHm" secondAttribute="centerX" constant="-0.5" id="uqp-XK-O7s"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Foursquare Explorer" id="iFn-KX-1N6"/>
+                    <navigationItem key="navigationItem" title="Foursquare Explorer" id="iFn-KX-1N6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="eRM-HW-pQJ">
+                            <connections>
+                                <action selector="refreshAction:" destination="pbe-5L-320" id="Hfs-Sh-cKu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="activityIndicator" destination="Oji-Cg-vHm" id="6JM-0H-033"/>
                         <outlet property="mapView" destination="Swq-mA-ELp" id="J3h-6O-DLG"/>
                         <outlet property="mapViewHeight" destination="Wof-oq-6O1" id="qaq-pQ-lpc"/>
+                        <outlet property="radiusSlider" destination="2qb-VM-wL6" id="p0M-wj-3C8"/>
                         <outlet property="radiusValue" destination="TTP-ua-zlj" id="toD-Xu-ex5"/>
                         <outlet property="tableView" destination="2zN-yi-BRf" id="WBS-Im-5Dh"/>
                     </connections>

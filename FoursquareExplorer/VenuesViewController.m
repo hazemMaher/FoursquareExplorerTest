@@ -15,17 +15,18 @@
 #import "VenueTableCell.h"
 #import "AppDelegate.h"
 
+#import <XHAmazingLoading/XHAmazingLoadingView.h>
 
 @interface VenuesViewController ()
 {
     VenueModel * _venueModel ;
+    XHAmazingLoadingView * loadingView ;
 }
 @property (retain, nonatomic) IBOutlet MKMapView *mapView;
 @property (retain, nonatomic) IBOutlet UITableView *tableView;
 @property (retain, nonatomic) IBOutlet NSLayoutConstraint *mapViewHeight;
-
-@property (retain, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (retain, nonatomic) IBOutlet UILabel *radiusValue;
+@property (retain, nonatomic) IBOutlet UISlider *radiusSlider;
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
@@ -41,6 +42,7 @@
     
     [self initLocationManager];
     [self initVenueModel];
+    [self initActivityIndicator];
     
 }
 
@@ -49,6 +51,16 @@
 }
 
 #pragma mark - InitMethods
+-(void)initActivityIndicator
+{
+    loadingView = [[XHAmazingLoadingView alloc] initWithType:XHAmazingLoadingAnimationTypeSkype];
+    loadingView.loadingTintColor = [UIColor redColor];
+    loadingView.backgroundTintColor = [UIColor clearColor];
+    loadingView.frame = self.view.bounds;
+    [self.view addSubview:loadingView];
+    
+    [loadingView startAnimating];
+}
 -(void)initVenueModel
 {
     _venueModel = [[VenueModel alloc]init];
@@ -131,7 +143,8 @@
 // when there is a new data , update the TableView & add the annotations for the MapView
 -(void)updateViewContent
 {
-    [self.activityIndicator setHidden:YES];
+    [loadingView stopAnimating];
+    [loadingView setHidden:YES];
     [self.tableView reloadData];
     [self proccessAnnotations];
 }
@@ -164,6 +177,18 @@
     
     [_venueModel filterVenuesWithRadius:radius];
     [self updateViewContent];
+}
+- (IBAction)refreshAction:(id)sender {
+    if (loadingView.isHidden) {
+        [self.locationManager startUpdatingLocation];
+        
+        _radiusSlider.value = 800 ;
+        [_radiusValue setText:[NSString stringWithFormat:@"%d",(int)_radiusSlider.value]];
+        
+        [loadingView startAnimating];
+        [loadingView setHidden:NO];
+    }
+    
 }
 
 #pragma mark - TableViewDataSource
@@ -257,8 +282,9 @@
     [_mapView release];
     [_tableView release];
     [_mapViewHeight release];
-    [_activityIndicator release];
+    [loadingView release];
     [_radiusValue release];
+    [_radiusSlider release];
     
     [super dealloc];
 }
