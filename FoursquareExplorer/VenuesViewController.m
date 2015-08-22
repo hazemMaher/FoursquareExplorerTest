@@ -20,18 +20,19 @@
 {
     VenueModel * _venueModel ;
 }
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *mapViewHeight;
+@property (retain, nonatomic) IBOutlet MKMapView *mapView;
+@property (retain, nonatomic) IBOutlet UITableView *tableView;
+@property (retain, nonatomic) IBOutlet NSLayoutConstraint *mapViewHeight;
 
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
-@property (weak, nonatomic) IBOutlet UILabel *radiusValue;
+@property (retain, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (retain, nonatomic) IBOutlet UILabel *radiusValue;
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
 @implementation VenuesViewController
+
 
 #pragma mark - ViewLifeCycle
 - (void)viewDidLoad
@@ -56,7 +57,7 @@
 -(void)initLocationManager
 {
     //Load LocationManager
-    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager = [[[CLLocationManager alloc]init]autorelease];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     self.locationManager.delegate = self;
     
@@ -110,6 +111,7 @@
     }
     
     [self.mapView removeAnnotations:annForRemove];
+    [annForRemove release];
 }
 
 // center the map on the user current location
@@ -126,7 +128,7 @@
     [self.mapView setRegion:region animated:YES];
 }
 
-// when there is a new data , update the TableView & add the annotation for the MapView
+// when there is a new data , update the TableView & add the annotations for the MapView
 -(void)updateViewContent
 {
     [self.activityIndicator setHidden:YES];
@@ -215,13 +217,14 @@
 
 #pragma mark - MapViewDelegate
 
-// to change the standard pin annotation view.
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+// change the standard pin annotation view & show extera information when pin is pressed.
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
     if (annotation == mapView.userLocation)
         return nil;
     
     static NSString *s = @"ann";
-    MKAnnotationView *pin = [mapView dequeueReusableAnnotationViewWithIdentifier:s];
+    MKAnnotationView *pin = [[mapView dequeueReusableAnnotationViewWithIdentifier:s]retain];
     if (!pin) {
         pin = [[MKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:s];
         pin.canShowCallout = YES;
@@ -230,7 +233,7 @@
         
         
     }
-    return pin;
+    return [pin autorelease];
 }
 
 #pragma mark - VenueModel Delegate
@@ -247,5 +250,17 @@
     [self startAnimatingMapAndTable];
 }
 
+#pragma mark - Dealloc
+-(void)dealloc
+{
+    [_venueModel release] ;
+    [_mapView release];
+    [_tableView release];
+    [_mapViewHeight release];
+    [_activityIndicator release];
+    [_radiusValue release];
+    
+    [super dealloc];
+}
 
 @end

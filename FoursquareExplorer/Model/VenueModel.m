@@ -140,9 +140,9 @@
 }
 -(void)dealloc
 {
-    [super dealloc];
     [_nearbyVenues release];
     [_filteredVenues release];
+    [super dealloc];
 }
 
 

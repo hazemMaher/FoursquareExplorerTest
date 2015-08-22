@@ -17,7 +17,7 @@
 		A7EAFF171B8740FB00296103 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7EAFF161B8740FB00296103 /* Images.xcassets */; };
 		A7EAFF1A1B8740FB00296103 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7EAFF181B8740FB00296103 /* LaunchScreen.xib */; };
 		A7EAFF261B8740FB00296103 /* FoursquareExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF251B8740FB00296103 /* FoursquareExplorerTests.m */; };
-		A7EAFF311B87412400296103 /* VenuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF301B87412400296103 /* VenuesViewController.m */; };
+		A7EAFF311B87412400296103 /* VenuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF301B87412400296103 /* VenuesViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7EAFF331B87418300296103 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EAFF321B87418300296103 /* MapKit.framework */; };
 		A7EAFF441B8742A900296103 /* Foursquare2.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF3A1B8742A900296103 /* Foursquare2.m */; };
 		A7EAFF451B8742A900296103 /* FSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF3C1B8742A900296103 /* FSKeychain.m */; };
