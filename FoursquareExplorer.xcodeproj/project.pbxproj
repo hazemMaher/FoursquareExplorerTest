@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7E6254C1B877C05005BD1BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E6254B1B877C05005BD1BA /* CoreData.framework */; };
+		A7E6254F1B877C79005BD1BA /* Venue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A7E6254D1B877C79005BD1BA /* Venue.xcdatamodeld */; };
+		A7E625521B877E2E005BD1BA /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E625511B877E2E005BD1BA /* Venue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A7E625551B878803005BD1BA /* VenueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E625541B878803005BD1BA /* VenueModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A7EAFF0C1B8740FB00296103 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF0B1B8740FB00296103 /* main.m */; };
 		A7EAFF0F1B8740FB00296103 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF0E1B8740FB00296103 /* AppDelegate.m */; };
-		A7EAFF121B8740FB00296103 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF111B8740FB00296103 /* ViewController.m */; };
 		A7EAFF151B8740FB00296103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7EAFF131B8740FB00296103 /* Main.storyboard */; };
 		A7EAFF171B8740FB00296103 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7EAFF161B8740FB00296103 /* Images.xcassets */; };
 		A7EAFF1A1B8740FB00296103 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7EAFF181B8740FB00296103 /* LaunchScreen.xib */; };
 		A7EAFF261B8740FB00296103 /* FoursquareExplorerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF251B8740FB00296103 /* FoursquareExplorerTests.m */; };
+		A7EAFF311B87412400296103 /* VenuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF301B87412400296103 /* VenuesViewController.m */; };
+		A7EAFF331B87418300296103 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EAFF321B87418300296103 /* MapKit.framework */; };
+		A7EAFF441B8742A900296103 /* Foursquare2.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF3A1B8742A900296103 /* Foursquare2.m */; };
+		A7EAFF451B8742A900296103 /* FSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF3C1B8742A900296103 /* FSKeychain.m */; };
+		A7EAFF461B8742A900296103 /* FSOAuthNoAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF3E1B8742A900296103 /* FSOAuthNoAppStore.m */; };
+		A7EAFF471B8742A900296103 /* FSOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF401B8742A900296103 /* FSOperation.m */; };
+		A7EAFF481B8742A900296103 /* FSWebLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF421B8742A900296103 /* FSWebLogin.m */; };
+		A7EAFF491B8742A900296103 /* FSWebLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7EAFF431B8742A900296103 /* FSWebLogin.xib */; };
+		A7EAFF4E1B87430000296103 /* VenueConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF4B1B87430000296103 /* VenueConverter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A7EAFF511B87446600296103 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EAFF501B87446600296103 /* CoreLocation.framework */; };
+		A7EAFF531B87447700296103 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7EAFF521B87447700296103 /* Security.framework */; };
+		A7EAFF571B87472A00296103 /* VenueTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EAFF561B87472A00296103 /* VenueTableCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +42,43 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7E6254B1B877C05005BD1BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A7E6254E1B877C79005BD1BA /* Venue.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Venue.xcdatamodel; sourceTree = "<group>"; };
+		A7E625501B877E2E005BD1BA /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Venue.h; path = Model/Venue.h; sourceTree = "<group>"; };
+		A7E625511B877E2E005BD1BA /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Venue.m; path = Model/Venue.m; sourceTree = "<group>"; };
+		A7E625531B878803005BD1BA /* VenueModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VenueModel.h; path = Model/VenueModel.h; sourceTree = "<group>"; };
+		A7E625541B878803005BD1BA /* VenueModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VenueModel.m; path = Model/VenueModel.m; sourceTree = "<group>"; };
 		A7EAFF061B8740FB00296103 /* FoursquareExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoursquareExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EAFF0A1B8740FB00296103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7EAFF0B1B8740FB00296103 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7EAFF0D1B8740FB00296103 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7EAFF0E1B8740FB00296103 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A7EAFF101B8740FB00296103 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A7EAFF111B8740FB00296103 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A7EAFF141B8740FB00296103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7EAFF161B8740FB00296103 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A7EAFF191B8740FB00296103 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A7EAFF1F1B8740FB00296103 /* FoursquareExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoursquareExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7EAFF241B8740FB00296103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7EAFF251B8740FB00296103 /* FoursquareExplorerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoursquareExplorerTests.m; sourceTree = "<group>"; };
+		A7EAFF2F1B87412400296103 /* VenuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenuesViewController.h; sourceTree = "<group>"; };
+		A7EAFF301B87412400296103 /* VenuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenuesViewController.m; sourceTree = "<group>"; };
+		A7EAFF321B87418300296103 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A7EAFF391B8742A900296103 /* Foursquare2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foursquare2.h; sourceTree = "<group>"; };
+		A7EAFF3A1B8742A900296103 /* Foursquare2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foursquare2.m; sourceTree = "<group>"; };
+		A7EAFF3B1B8742A900296103 /* FSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSKeychain.h; sourceTree = "<group>"; };
+		A7EAFF3C1B8742A900296103 /* FSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSKeychain.m; sourceTree = "<group>"; };
+		A7EAFF3D1B8742A900296103 /* FSOAuthNoAppStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSOAuthNoAppStore.h; sourceTree = "<group>"; };
+		A7EAFF3E1B8742A900296103 /* FSOAuthNoAppStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSOAuthNoAppStore.m; sourceTree = "<group>"; };
+		A7EAFF3F1B8742A900296103 /* FSOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSOperation.h; sourceTree = "<group>"; };
+		A7EAFF401B8742A900296103 /* FSOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSOperation.m; sourceTree = "<group>"; };
+		A7EAFF411B8742A900296103 /* FSWebLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSWebLogin.h; sourceTree = "<group>"; };
+		A7EAFF421B8742A900296103 /* FSWebLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSWebLogin.m; sourceTree = "<group>"; };
+		A7EAFF431B8742A900296103 /* FSWebLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSWebLogin.xib; sourceTree = "<group>"; };
+		A7EAFF4A1B87430000296103 /* VenueConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VenueConverter.h; path = Model/VenueConverter.h; sourceTree = "<group>"; };
+		A7EAFF4B1B87430000296103 /* VenueConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VenueConverter.m; path = Model/VenueConverter.m; sourceTree = "<group>"; };
+		A7EAFF501B87446600296103 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A7EAFF521B87447700296103 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A7EAFF551B87472A00296103 /* VenueTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VenueTableCell.h; path = CustomView/VenueTableCell.h; sourceTree = "<group>"; };
+		A7EAFF561B87472A00296103 /* VenueTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VenueTableCell.m; path = CustomView/VenueTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +86,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7E6254C1B877C05005BD1BA /* CoreData.framework in Frameworks */,
+				A7EAFF531B87447700296103 /* Security.framework in Frameworks */,
+				A7EAFF511B87446600296103 /* CoreLocation.framework in Frameworks */,
+				A7EAFF331B87418300296103 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				A7EAFF081B8740FB00296103 /* FoursquareExplorer */,
+				A7EC51AA1B888260003614BA /* Frameworks */,
 				A7EAFF221B8740FB00296103 /* FoursquareExplorerTests */,
 				A7EAFF071B8740FB00296103 /* Products */,
 			);
@@ -81,10 +125,11 @@
 		A7EAFF081B8740FB00296103 /* FoursquareExplorer */ = {
 			isa = PBXGroup;
 			children = (
-				A7EAFF0D1B8740FB00296103 /* AppDelegate.h */,
-				A7EAFF0E1B8740FB00296103 /* AppDelegate.m */,
-				A7EAFF101B8740FB00296103 /* ViewController.h */,
-				A7EAFF111B8740FB00296103 /* ViewController.m */,
+				A7EAFF341B87427200296103 /* AppDelegate */,
+				A7EAFF541B8746FA00296103 /* CustomView */,
+				A7EAFF371B87428E00296103 /* Vendor */,
+				A7EAFF361B87428A00296103 /* Model */,
+				A7EAFF351B87427D00296103 /* ViewControllers */,
 				A7EAFF131B8740FB00296103 /* Main.storyboard */,
 				A7EAFF161B8740FB00296103 /* Images.xcassets */,
 				A7EAFF181B8740FB00296103 /* LaunchScreen.xib */,
@@ -96,6 +141,7 @@
 		A7EAFF091B8740FB00296103 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A7E6254D1B877C79005BD1BA /* Venue.xcdatamodeld */,
 				A7EAFF0A1B8740FB00296103 /* Info.plist */,
 				A7EAFF0B1B8740FB00296103 /* main.m */,
 			);
@@ -117,6 +163,84 @@
 				A7EAFF241B8740FB00296103 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7EAFF341B87427200296103 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A7EAFF0D1B8740FB00296103 /* AppDelegate.h */,
+				A7EAFF0E1B8740FB00296103 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A7EAFF351B87427D00296103 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A7EAFF2F1B87412400296103 /* VenuesViewController.h */,
+				A7EAFF301B87412400296103 /* VenuesViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A7EAFF361B87428A00296103 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A7E625531B878803005BD1BA /* VenueModel.h */,
+				A7E625541B878803005BD1BA /* VenueModel.m */,
+				A7EAFF4A1B87430000296103 /* VenueConverter.h */,
+				A7EAFF4B1B87430000296103 /* VenueConverter.m */,
+				A7E625501B877E2E005BD1BA /* Venue.h */,
+				A7E625511B877E2E005BD1BA /* Venue.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A7EAFF371B87428E00296103 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				A7EAFF381B8742A900296103 /* FourSquare */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		A7EAFF381B8742A900296103 /* FourSquare */ = {
+			isa = PBXGroup;
+			children = (
+				A7EAFF391B8742A900296103 /* Foursquare2.h */,
+				A7EAFF3A1B8742A900296103 /* Foursquare2.m */,
+				A7EAFF3B1B8742A900296103 /* FSKeychain.h */,
+				A7EAFF3C1B8742A900296103 /* FSKeychain.m */,
+				A7EAFF3D1B8742A900296103 /* FSOAuthNoAppStore.h */,
+				A7EAFF3E1B8742A900296103 /* FSOAuthNoAppStore.m */,
+				A7EAFF3F1B8742A900296103 /* FSOperation.h */,
+				A7EAFF401B8742A900296103 /* FSOperation.m */,
+				A7EAFF411B8742A900296103 /* FSWebLogin.h */,
+				A7EAFF421B8742A900296103 /* FSWebLogin.m */,
+				A7EAFF431B8742A900296103 /* FSWebLogin.xib */,
+			);
+			path = FourSquare;
+			sourceTree = "<group>";
+		};
+		A7EAFF541B8746FA00296103 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				A7EAFF551B87472A00296103 /* VenueTableCell.h */,
+				A7EAFF561B87472A00296103 /* VenueTableCell.m */,
+			);
+			name = CustomView;
+			sourceTree = "<group>";
+		};
+		A7EC51AA1B888260003614BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7E6254B1B877C05005BD1BA /* CoreData.framework */,
+				A7EAFF521B87447700296103 /* Security.framework */,
+				A7EAFF501B87446600296103 /* CoreLocation.framework */,
+				A7EAFF321B87418300296103 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			path = FoursquareExplorer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +326,7 @@
 				A7EAFF151B8740FB00296103 /* Main.storyboard in Resources */,
 				A7EAFF1A1B8740FB00296103 /* LaunchScreen.xib in Resources */,
 				A7EAFF171B8740FB00296103 /* Images.xcassets in Resources */,
+				A7EAFF491B8742A900296103 /* FSWebLogin.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +344,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7EAFF121B8740FB00296103 /* ViewController.m in Sources */,
+				A7E625521B877E2E005BD1BA /* Venue.m in Sources */,
+				A7EAFF311B87412400296103 /* VenuesViewController.m in Sources */,
+				A7E6254F1B877C79005BD1BA /* Venue.xcdatamodeld in Sources */,
+				A7EAFF571B87472A00296103 /* VenueTableCell.m in Sources */,
+				A7E625551B878803005BD1BA /* VenueModel.m in Sources */,
+				A7EAFF471B8742A900296103 /* FSOperation.m in Sources */,
 				A7EAFF0F1B8740FB00296103 /* AppDelegate.m in Sources */,
+				A7EAFF451B8742A900296103 /* FSKeychain.m in Sources */,
 				A7EAFF0C1B8740FB00296103 /* main.m in Sources */,
+				A7EAFF441B8742A900296103 /* Foursquare2.m in Sources */,
+				A7EAFF461B8742A900296103 /* FSOAuthNoAppStore.m in Sources */,
+				A7EAFF4E1B87430000296103 /* VenueConverter.m in Sources */,
+				A7EAFF481B8742A900296103 /* FSWebLogin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,9 +484,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = FoursquareExplorer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -359,9 +497,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = FoursquareExplorer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -418,6 +559,7 @@
 				A7EAFF2B1B8740FB00296103 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7EAFF2C1B8740FB00296103 /* Build configuration list for PBXNativeTarget "FoursquareExplorerTests" */ = {
 			isa = XCConfigurationList;
@@ -426,8 +568,22 @@
 				A7EAFF2E1B8740FB00296103 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A7E6254D1B877C79005BD1BA /* Venue.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A7E6254E1B877C79005BD1BA /* Venue.xcdatamodel */,
+			);
+			currentVersion = A7E6254E1B877C79005BD1BA /* Venue.xcdatamodel */;
+			path = Venue.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A7EAFEFE1B8740FB00296103 /* Project object */;
 }

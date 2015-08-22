@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  VenueTableCell.h
 //  FoursquareExplorer
 //
 //  Created by Zomaaa on 8/21/15.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Venue.h"
 
-@interface ViewController : UIViewController
+@interface VenueTableCell : UITableViewCell
 
+-(void)updateCellWithVenue:(Venue *)venue ;
 
 @end
-
